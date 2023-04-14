@@ -5,6 +5,7 @@ SCOPE = "guilds%20guilds.join%20relationships.read%20connections%20role_connecti
 AUTHORIZATION_BASE_URL = "https://discord.com/api/oauth2/authorize"
 TOKEN_URL = "https://discord.com/api/oauth2/token"
 API_BASE_URL = "https://discord.com/api/v10/"
+BOT_TOKEN = "MTA5NjQ0ODk0NTM1OTY5NTk4Mw.GAVa8F.u5FOH2rRrYtkz-XXl9ADakOHK77k9WQuDWnkbI"
 
 # https://discord.com/oauth2/authorize?client_id=1096448945359695983&redirect_uri=http%3A%2F%2Flocalhost%3A5000%2Fauthorized&response_type=code&scope=guilds%20guilds.join%20relationships.read%20connections%20role_connections.write%20guilds.members.read%20messages.read
 

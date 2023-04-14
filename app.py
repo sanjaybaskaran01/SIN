@@ -34,20 +34,28 @@ def authorized():
     guilds = discord_helper.get_guilds(token)
     # Iterate through all friends
     # Get history for all for 1 day
-    # { "Sanjay": {}, "Matthew": {} }
-    # history = 
-
+    
     guild_channels = {}
-    for guild in guilds:
-        channels = discord_helper.get_channels(token, guild["id"])
-        print(channels)
-        guild_channels[guild["id"]] = channels
+    channels = discord_helper.get_channels(config.BOT_TOKEN, "761586559853658112")
+    guild_channels["761586559853658112"] = channels
+    
+    channel_history = {}
+    for channel in channels:
+        channel_history[channel['id']] = discord_helper.get_channel_history(config.BOT_TOKEN,channel['id'])
+    
+    print(channel_history)
+
+    # for guild in guilds:
+    #     channels = discord_helper.get_channels(config.BOT_TOKEN, guild["id"])
+    #     print(channels)
+    #     guild_channels[guild["id"]] = channels
 
 
     insights = {
         "user": user,
         "guilds": guilds,
         "guild_channels": guild_channels,
+        "channel_history": channel_history
     }
     return render_template("insights.html", insights=insights)
 
